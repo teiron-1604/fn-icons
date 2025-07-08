@@ -6,14 +6,6 @@ const PQueue = require('p-queue')
 require('dotenv').config()
 const { FIGMA_TOKEN, FIGMA_FILE_URL } = process.env
 
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve()
-    }, ms)
-  })
-}
-
 const options = {
   format: 'svg',
   outputDir: './src/',
