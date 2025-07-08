@@ -29,7 +29,7 @@ jobs:
       - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      - run: pnpm build
+      - run: pnpm build:docs
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.2.5
         with:

@@ -3,7 +3,7 @@
 const path = require('path')
 const fs = require('fs')
 const format = require('prettier-eslint')
-const processSvg = require('./processSvg')
+const processSvg = require('./process-svg')
 const { parseName } = require('./utils')
 const defaultStyle = process.env.npm_package_config_style || 'stroke'
 const { getAttrs, getElementCode } = require('./template')
@@ -32,45 +32,50 @@ const generateIconsIndex = () => {
   }
 
   type Icon = ComponentType<Props>;
-  `;
+  `
 
-  fs.writeFileSync(path.join(rootDir, 'src', 'icons.js'), '', 'utf-8');
+  fs.writeFileSync(path.join(rootDir, 'src', 'icons.js'), '', 'utf-8')
   fs.writeFileSync(
     path.join(rootDir, 'src', 'icons.d.ts'),
     initialTypeDefinitions,
-    'utf-8',
-  );
+    'utf-8'
+  )
 }
 
 // generate attributes code
 const attrsToString = (attrs, style) => {
-  console.log('style: ', style)
-  return Object.keys(attrs).map((key) => {
-    // should distinguish fill or stroke
-    // if (key === 'width' || key === 'height' || key === style) {
-    if (key === style) {
-      return key + '={' + attrs[key] + '}';
-    }
-    if (key === "className" && attrs[key]) {
-      return `className={"${attrs[key]} " + className}`
-    }
-    if (key === 'otherProps') {
-      return '{...otherProps}';
-    }
-    return key + '="' + attrs[key] + '"';
-  }).join(' ');
-};
+  return Object.keys(attrs)
+    .map((key) => {
+      // should distinguish fill or stroke
+      // if (key === 'width' || key === 'height' || key === style) {
+      if (key === style) {
+        return key + '={' + attrs[key] + '}'
+      }
+      if (key === 'className' && attrs[key]) {
+        return `className={"${attrs[key]} " + className}`
+      }
+      if (key === 'otherProps') {
+        return '{...otherProps}'
+      }
+      return key + '="' + attrs[key] + '"'
+    })
+    .join(' ')
+}
 
 // generate icon code separately
-const generateIconCode = async ({name}) => {
+const generateIconCode = async ({ name }) => {
   const names = parseName(name, defaultStyle)
-  console.log(names)
+  // console.log(names)
   const location = path.join(rootDir, 'src/svg', `${names.name}.svg`)
   const destination = path.join(rootDir, 'src/icons', `${names.name}.js`)
   const code = fs.readFileSync(location)
   const svgCode = await processSvg(code)
   const ComponentName = names.componentName
-  const element = getElementCode(ComponentName, attrsToString(getAttrs(names.style, name), names.style), svgCode)
+  const element = getElementCode(
+    ComponentName,
+    attrsToString(getAttrs(names.style, name), names.style),
+    svgCode
+  )
   const component = format({
     text: element,
     eslintConfig: {
@@ -81,39 +86,37 @@ const generateIconCode = async ({name}) => {
       singleQuote: true,
       parser: 'flow',
     },
-  });
+  })
 
-  fs.writeFileSync(destination, component, 'utf-8');
+  fs.writeFileSync(destination, component, 'utf-8')
 
-  console.log('Successfully built', ComponentName);
-  return {ComponentName, name: names.name}
+  console.log('Successfully built', ComponentName)
+  return { ComponentName, name: names.name }
 }
 
 // append export code to icons.js
-const appendToIconsIndex = ({ComponentName, name}) => {
-  const exportString = `export { default as ${ComponentName} } from './icons/${name}';\r\n`;
+const appendToIconsIndex = ({ ComponentName, name }) => {
+  const exportString = `export { default as ${ComponentName} } from './icons/${name}';\r\n`
   fs.appendFileSync(
     path.join(rootDir, 'src', 'icons.js'),
     exportString,
-    'utf-8',
-  );
+    'utf-8'
+  )
 
-  const exportTypeString = `export const ${ComponentName}: Icon;\n`;
+  const exportTypeString = `export const ${ComponentName}: Icon;\n`
   fs.appendFileSync(
     path.join(rootDir, 'src', 'icons.d.ts'),
     exportTypeString,
-    'utf-8',
-  );
+    'utf-8'
+  )
 }
 
 generateIconsIndex()
 
-Object
-  .keys(icons)
-  .map(key => icons[key])
-  .forEach(({name}) => {
-    generateIconCode({name})
-      .then(({ComponentName, name}) => {
-        appendToIconsIndex({ComponentName, name})
-      })
+Object.keys(icons)
+  .map((key) => icons[key])
+  .forEach(({ name }) => {
+    generateIconCode({ name }).then(({ ComponentName, name }) => {
+      appendToIconsIndex({ ComponentName, name })
+    })
   })

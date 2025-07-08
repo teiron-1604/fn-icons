@@ -7,7 +7,7 @@ const getAttrs = (style, name) => {
   }
   const fillAttrs = {
     fill: 'color',
-    otherProps: '...otherProps'
+    otherProps: '...otherProps',
   }
   const strokeAttrs = {
     fill: 'none',
@@ -15,13 +15,17 @@ const getAttrs = (style, name) => {
     strokeWidth: 2,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
-    otherProps: '...otherProps'
+    otherProps: '...otherProps',
   }
   if (name === 'loader') {
     fillAttrs.className = 'animate-spin'
     strokeAttrs.className = 'animate-spin'
   }
-  return Object.assign({}, baseAttrs, style==='fill' ? fillAttrs : strokeAttrs)
+  return Object.assign(
+    {},
+    baseAttrs,
+    style === 'fill' ? fillAttrs : strokeAttrs
+  )
 }
 
 const getElementCode = (ComponentName, attrs, svgCode) => `
@@ -29,7 +33,11 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
   import PropTypes from 'prop-types';
 
   const ${ComponentName} = (props) => {
-    ${attrs.includes('className') ? "const { color = \"currentColor\", className=\"\", ...otherProps } = props;" : "const { color = \"currentColor\", ...otherProps } = props;"}
+    ${
+      attrs.includes('className')
+        ? 'const { color = "currentColor", className="", ...otherProps } = props;'
+        : 'const { color = "currentColor", ...otherProps } = props;'
+    }
     return (
       <svg ${attrs}>
         ${svgCode}
