@@ -117,7 +117,7 @@ client.file(fileId)
   })
 
 function queueTasks(tasks, options) {
-  const queue = new PQueue(Object.assign({concurrency: 3}, options))
+  const queue = new PQueue(Object.assign({concurrency: 5}, options))
   for (const task of tasks) {
     queue.add(task)
   }
