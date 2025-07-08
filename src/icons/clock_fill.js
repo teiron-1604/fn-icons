@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ClockFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1-10V7h-2v7h6v-2h-4z"></path>
+      <path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 4a1 1 0 00-1 1v6a1 1 0 001 1h4.5a1 1 0 100-2H13V6a1 1 0 00-1-1z"></path>
     </svg>
   );
 };
 
 ClockFill.propTypes = {
   color: PropTypes.string
-};
-
-ClockFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ClockFill;

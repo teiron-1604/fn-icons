@@ -2,31 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Mirror = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 2v20l7-4V6L2 2zm2 3.446v13.108l3-1.715V7.161L4 5.446zm13 1.715v9.678l3 1.715V5.446l-3 1.715zM15 6v12l7 4V2l-7 4zm-2 16V2h-2v20h2z"
-      ></path>
+      <path d="M9 6v12l-7 4V2l7 4zm4 16h-2V2h2v20zm9 0l-7-4V6l7-4v20zM4 18.554l3-1.715V7.16L4 5.446v13.108zM17 7.16v9.678l3 1.715V5.446l-3 1.715z"></path>
     </svg>
   );
 };
 
 Mirror.propTypes = {
   color: PropTypes.string
-};
-
-Mirror.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Mirror;

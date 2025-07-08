@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FileZipFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M10 2v2h2V2h8.007c.548 0 .993.444.993.992v18.016a1 1 0 01-.993.992H3.993A.993.993 0 013 21.008V2.992A1 1 0 013.993 2H10zm2 2v2h2V4h-2zm-2 2v2h2V6h-2zm2 2v2h2V8h-2zm-2 2v2h2v-2h-2zm2 2v2h-2v3h4v-5h-2z"></path>
+      <g clipPath="url(#clip0_18_13145)">
+        <path d="M14.172 1a3 3 0 012.121.879l3.828 3.828.2.22A3 3 0 0121 7.828V20a3 3 0 01-3 3h-8a3 3 0 001-5.826V16a1 1 0 10-2 0v1.174A2.998 2.998 0 0010 23H6a3 3 0 01-3-3V4a3 3 0 013-3h8.172zM10 19a1 1 0 110 2 1 1 0 010-2zm0-9a1 1 0 00-1 1v1a1 1 0 102 0v-1a1 1 0 00-1-1zm0-5a1 1 0 00-1 1v1a1 1 0 002 0V6a1 1 0 00-1-1z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_13145">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 FileZipFill.propTypes = {
   color: PropTypes.string
-};
-
-FileZipFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FileZipFill;

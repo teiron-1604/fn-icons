@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const StarFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928L12 18.26z"></path>
+      <path d="M12.214 1.015c.14.02.277.059.406.116l.189.1.172.123c.11.091.205.197.285.314l.107.184 2.31 4.68.068.116a1.123 1.123 0 00.776.497l5.165.755c.211.031.413.106.593.22l.173.124.152.149c.095.105.174.224.237.351l.08.197.052.207a1.533 1.533 0 01-.439 1.362h-.001l-3.735 3.638a1.124 1.124 0 00-.324.993l.881 5.135.023.213a1.53 1.53 0 01-2.248 1.404v-.001l-4.614-2.425a1.122 1.122 0 00-.385-.12L12 19.339c-.181 0-.36.043-.522.127h.001l-4.616 2.427h.001a1.531 1.531 0 01-2.244-1.404l.022-.212.88-5.135.015-.135a1.122 1.122 0 00-.246-.758l-.092-.1-3.736-3.637v-.001a1.528 1.528 0 01-.39-1.57l.08-.198c.094-.192.227-.363.392-.5l.173-.127c.12-.075.25-.133.387-.173l.21-.045 5.16-.753.133-.029a1.123 1.123 0 00.712-.585l2.309-4.678v-.001l.108-.184a1.53 1.53 0 01.456-.438l.189-.1c.194-.085.405-.13.619-.13l.212.015z"></path>
     </svg>
   );
 };
 
 StarFill.propTypes = {
   color: PropTypes.string
-};
-
-StarFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default StarFill;

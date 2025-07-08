@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Movie = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15268)">
-        <path d="M2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM4 5v14h16V5H4zm6.622 3.415l4.879 3.252a.4.4 0 010 .666l-4.88 3.252a.4.4 0 01-.621-.332V8.747a.4.4 0 01.622-.332z"></path>
+        <path d="M20 5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1V5zM8.528 7.118a1 1 0 011.027.05l6 4a1 1 0 010 1.664l-6 4A1 1 0 018 16V8a1 1 0 01.528-.882zM10 14.131L13.197 12 10 9.868v4.263zM22 19a3 3 0 01-3 3H5a3 3 0 01-3-3V5a3 3 0 013-3h14a3 3 0 013 3v14z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15268">
@@ -26,10 +30,6 @@ const Movie = props => {
 
 Movie.propTypes = {
   color: PropTypes.string
-};
-
-Movie.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Movie;

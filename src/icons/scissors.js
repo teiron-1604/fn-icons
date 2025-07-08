@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Scissors = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 13.414l-2.554 2.554a4 4 0 11-1.414-1.414L10.586 12 4.565 5.98a2 2 0 010-2.83L12 10.587l7.435-7.435a2 2 0 010 2.828L13.415 12l2.553 2.554a4 4 0 11-1.414 1.414L12 13.414zM6 20a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"></path>
+      <g clipPath="url(#clip0_18_13954)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M3.5 17.5a2 2 0 104 0 2 2 0 00-4 0zm4.032-3.446a4 4 0 101.414 1.414l2.554-2.554 2.554 2.554a4 4 0 101.414-1.414l-3.252-3.252-.009-.01a.395.395 0 00-.009-.008l-7.99-7.991a1 1 0 00-1.415 1.414l7.293 7.293-2.554 2.554zm8.52 2.067a1.034 1.034 0 00.069-.07 2 2 0 11-.07.07zm-2.46-6.714a1 1 0 010-1.414l5.2-5.2a1 1 0 011.415 1.414l-5.2 5.2a1 1 0 01-1.414 0z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_13954">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 Scissors.propTypes = {
   color: PropTypes.string
-};
-
-Scissors.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Scissors;

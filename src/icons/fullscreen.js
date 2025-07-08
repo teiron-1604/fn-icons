@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Fullscreen = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+      <path d="M2 19v-2a1 1 0 112 0v2a1 1 0 001 1h2a1 1 0 110 2H5a3 3 0 01-3-3zm18 0v-2a1 1 0 112 0v2a3 3 0 01-3 3h-2a1 1 0 110-2h2a1 1 0 001-1zM2 7V5a3 3 0 013-3h2a1 1 0 010 2H5a1 1 0 00-1 1v2a1 1 0 01-2 0zm18 0V5a1 1 0 00-1-1h-2a1 1 0 110-2h2a3 3 0 013 3v2a1 1 0 11-2 0z"></path>
     </svg>
   );
 };
 
 Fullscreen.propTypes = {
   color: PropTypes.string
-};
-
-Fullscreen.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Fullscreen;

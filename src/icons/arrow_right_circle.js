@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowRightCircle = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 11V8l4 4-4 4v-3H8v-2h4zm0-9c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8z"></path>
+      <path d="M12 21a9 9 0 100-18 9 9 0 000 18zM7.25 11h6.586l-2.793-2.793a1 1 0 111.414-1.414l4.5 4.5.068.076a1 1 0 01-.068 1.338l-4.5 4.5-.076.068a1 1 0 01-1.406-1.406l.068-.076L13.836 13H7.25a1 1 0 110-2zM12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11-4.925 11-11 11z"></path>
     </svg>
   );
 };
 
 ArrowRightCircle.propTypes = {
   color: PropTypes.string
-};
-
-ArrowRightCircle.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ArrowRightCircle;

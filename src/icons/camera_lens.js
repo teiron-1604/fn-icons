@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CameraLens = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M9.858 19.71L12 16H5.07a8.018 8.018 0 004.788 3.71zM4.252 14h4.284L5.07 7.999A7.963 7.963 0 004 12c0 .69.088 1.36.252 2zm2.143-7.708L8.535 10 12 4a7.974 7.974 0 00-5.605 2.292zm7.747-2.002L12 8h6.93a8.018 8.018 0 00-4.788-3.71zM19.748 10h-4.284l3.465 6.001A7.962 7.962 0 0020 12c0-.69-.088-1.36-.252-2zm-2.143 7.708L15.465 14 12 20a7.974 7.974 0 005.605-2.292zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1.155-12h-2.31l-1.154 2 1.154 2h2.31l1.154-2-1.154-2z"></path>
+      <g clipPath="url(#clip0_18_15830)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M3.926 8.019A8.963 8.963 0 003 12c0 1.052.18 2.062.512 3h4.446l-1.43-2.476a1.01 1.01 0 01-.027-.046l-2.575-4.46zM3.095 5.54A10.95 10.95 0 001 12a10.964 10.964 0 00.94 4.457A11.01 11.01 0 0012 23c3.596 0 6.789-1.725 8.796-4.393a.997.997 0 00.11-.149A10.95 10.95 0 0023 12a10.964 10.964 0 00-.94-4.458A11.01 11.01 0 0012 1C8.404 1 5.21 2.726 3.204 5.394a.994.994 0 00-.11.147zm2.063.612L7.38 10l1.44-2.493a.996.996 0 01.007-.012l2.584-4.476a8.98 8.98 0 00-6.253 3.134zm8.487-3.003L11.422 7h8.063a9.005 9.005 0 00-5.84-3.85zM20.488 9h-4.446l1.435 2.485.017.029 2.58 4.467c.593-1.2.926-2.552.926-3.981 0-1.052-.18-2.062-.512-3zm-1.646 8.847L16.62 14l-1.433 2.481a.855.855 0 01-.02.036l-2.579 4.464a8.98 8.98 0 006.254-3.134zm-8.487 3.003L12.578 17H4.516a9.004 9.004 0 005.839 3.85zM10.267 15h3.466l1.732-3-1.732-3h-3.466l-1.732 3 1.732 3z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15830">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 CameraLens.propTypes = {
   color: PropTypes.string
-};
-
-CameraLens.defaultProps = {
-  color: 'currentColor'
 };
 
 export default CameraLens;

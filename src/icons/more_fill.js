@@ -2,31 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MoreFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-5-8.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm6.5-1.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-      ></path>
+      <path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zM7 11a1 1 0 100 2h.01l.102-.005a1 1 0 000-1.99L7.01 11H7zm5 0a1 1 0 100 2h.01l.102-.005a1 1 0 000-1.99L12.01 11H12zm5 0a1 1 0 100 2h.01l.102-.005a1 1 0 000-1.99L17.01 11H17z"></path>
     </svg>
   );
 };
 
 MoreFill.propTypes = {
   color: PropTypes.string
-};
-
-MoreFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default MoreFill;

@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SkipForward = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M16 12.667L5.777 19.482A.5.5 0 015 19.066V4.934a.5.5 0 01.777-.416L16 11.333V5a1 1 0 012 0v14a1 1 0 01-2 0v-6.333zm-9-4.93v8.526L13.394 12 7 7.737z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M4.567 3.099a1 1 0 011.058.12l10 8a1 1 0 010 1.562l-10 8A1 1 0 014 20V4a1 1 0 01.567-.901zM6 6.08v11.838L13.4 12 6 6.08zM19 4a1 1 0 011 1v14a1 1 0 11-2 0V5a1 1 0 011-1z"
+      ></path>
     </svg>
   );
 };
 
 SkipForward.propTypes = {
   color: PropTypes.string
-};
-
-SkipForward.defaultProps = {
-  color: 'currentColor'
 };
 
 export default SkipForward;

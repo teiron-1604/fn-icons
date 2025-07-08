@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FileMusic = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path d="M16 8v2h-3v4.5a2.5 2.5 0 11-2-2.45V8h4V4H5v16h14V8h-3zM3 2.992C3 2.444 3.447 2 3.999 2H16l5 5v13.993A1 1 0 0120.007 22H3.993A1 1 0 013 21.008V2.992z"></path>
@@ -19,10 +23,6 @@ const FileMusic = props => {
 
 FileMusic.propTypes = {
   color: PropTypes.string
-};
-
-FileMusic.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FileMusic;

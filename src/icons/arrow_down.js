@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowDown = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"></path>
+      <path d="M5.293 15.707a1 1 0 011.414-1.414L11 18.586V3l.005-.102a1 1 0 011.99 0L13 3v15.586l4.293-4.293.076-.068a1 1 0 011.406 1.406l-.068.076-6 6a1 1 0 01-1.414 0l-6-6z"></path>
     </svg>
   );
 };
 
 ArrowDown.propTypes = {
   color: PropTypes.string
-};
-
-ArrowDown.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ArrowDown;

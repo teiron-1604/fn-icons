@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ShareForwardFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_14843)">
-        <path d="M13 14h-2a8.999 8.999 0 00-7.968 4.81C3.011 18.54 3 18.27 3 18 3 12.477 7.477 8 13 8V3l10 8-10 8v-5z"></path>
+        <path d="M12.617 1.076a1 1 0 011.09.217l9 9a1 1 0 01-.02 1.434l-9 8.5A1 1 0 0112 19.5v-4.44c-2.593.308-4.52 1.789-5.87 3.345a14.404 14.404 0 00-2.081 3.196 7.641 7.641 0 00-.116.261l-.004.01-.001.001A1 1 0 012 21.5c0-4.311.627-8.046 2.346-10.728C5.969 8.24 8.489 6.764 12 6.532V2a1 1 0 01.617-.924z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_14843">
@@ -26,10 +30,6 @@ const ShareForwardFill = props => {
 
 ShareForwardFill.propTypes = {
   color: PropTypes.string
-};
-
-ShareForwardFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ShareForwardFill;

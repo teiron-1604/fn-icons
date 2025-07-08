@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PauseCircleFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM9 9v6h2V9H9zm4 0v6h2V9h-2z"></path>
+      <g clipPath="url(#clip0_18_15338)">
+        <path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm-2 7a1 1 0 00-1 1v6a1 1 0 102 0V9a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v6a1 1 0 102 0V9a1 1 0 00-1-1z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15338">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 PauseCircleFill.propTypes = {
   color: PropTypes.string
-};
-
-PauseCircleFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default PauseCircleFill;

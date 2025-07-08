@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BarChartBoxFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path d="M3 3h18a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm4 10v4h2v-4H7zm4-6v10h2V7h-2zm4 3v7h2v-7h-2z"></path>
@@ -19,10 +23,6 @@ const BarChartBoxFill = props => {
 
 BarChartBoxFill.propTypes = {
   color: PropTypes.string
-};
-
-BarChartBoxFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default BarChartBoxFill;

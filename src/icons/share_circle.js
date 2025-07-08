@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ShareCircle = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_14869)">
-        <path d="M11 2.05v2.012A8.001 8.001 0 0012 20a8 8 0 007.938-7h2.013c-.502 5.053-4.766 9-9.951 9-5.523 0-10-4.477-10-10 0-5.185 3.947-9.449 9-9.95zm9 3.364l-8 8L10.586 12l8-8H14V2h8v8h-2V5.414z"></path>
+        <path d="M12 1a1 1 0 110 2 9 9 0 109 9 1 1 0 012 0A11 11 0 1112 1zm11 7a1 1 0 11-2 0V4.414l-8.293 8.293a1 1 0 11-1.414-1.414L19.586 3H16a1 1 0 010-2h6l.103.005A1 1 0 0123 2v6z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_14869">
@@ -26,10 +30,6 @@ const ShareCircle = props => {
 
 ShareCircle.propTypes = {
   color: PropTypes.string
-};
-
-ShareCircle.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ShareCircle;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PictureInPictureInFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,8 @@ const PictureInPictureInFill = props => {
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15367)">
-        <path d="M21 3a1 1 0 011 1v7h-2V5H4v14h6v2H3a1 1 0 01-1-1V4a1 1 0 011-1h18zm0 10a1 1 0 011 1v6a1 1 0 01-1 1h-8a1 1 0 01-1-1v-6a1 1 0 011-1h8zM6.707 6.293l2.25 2.25L11 6.5V12H5.5l2.043-2.043-2.25-2.25 1.414-1.414z"></path>
+        <path d="M10 12a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6a2 2 0 012-2h6z"></path>
+        <path d="M19 2a3 3 0 013 3v14a3 3 0 01-3 3h-3.983a1 1 0 010-2H19a1 1 0 001-1V5.555l-3.143 3.142L18.4 10.24a.34.34 0 01-.24.58h-3.838a1 1 0 01-1-1V5.98a.34.34 0 01.58-.24l1.542 1.543L18.727 4H5a1 1 0 00-1 1v4a1 1 0 01-2 0V5a3 3 0 013-3h14z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15367">
@@ -26,10 +27,6 @@ const PictureInPictureInFill = props => {
 
 PictureInPictureInFill.propTypes = {
   color: PropTypes.string
-};
-
-PictureInPictureInFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default PictureInPictureInFill;

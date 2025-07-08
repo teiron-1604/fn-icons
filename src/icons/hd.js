@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Hd = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15041)">
-        <path d="M4 5v14h16V5H4zM3 3h18a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm4.5 8.25h2V9H11v6H9.5v-2.25h-2V15H6V9h1.5v2.25zm7-.75v3H16a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5h-1.5zM13 9h3a2 2 0 012 2v2a2 2 0 01-2 2h-3V9z"></path>
+        <path d="M20 3a3 3 0 013 3v12a3 3 0 01-3 3H4a3 3 0 01-3-3V6a3 3 0 013-3h16zM4 5a1 1 0 00-1 1v12a1 1 0 001 1h16a1 1 0 001-1V6a1 1 0 00-1-1H4zm5.958 4c.483 0 .875.392.875.875v5.25a.875.875 0 11-1.75 0v-1.75H6.75v1.75a.875.875 0 01-1.75 0v-5.25a.875.875 0 111.75 0v1.75h2.333v-1.75c0-.483.392-.875.875-.875zm6.709 0A2.333 2.333 0 0119 11.333v2.334A2.333 2.333 0 0116.667 16h-2.5a1 1 0 01-1-1v-5a1 1 0 011-1h2.5zm-1.75 5.25h1.75a.583.583 0 00.583-.583v-2.334a.583.583 0 00-.583-.583h-1.75v3.5z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15041">
@@ -26,10 +30,6 @@ const Hd = props => {
 
 Hd.propTypes = {
   color: PropTypes.string
-};
-
-Hd.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Hd;

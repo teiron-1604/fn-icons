@@ -2,34 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MapPin = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <g clipPath="url(#clip0_18_12807)">
-        <path d="M11 19.945A9.001 9.001 0 0112 2a9 9 0 011 17.945V24h-2v-4.055zM12 18a7.001 7.001 0 100-14.002A7.001 7.001 0 0012 18z"></path>
-      </g>
-      <defs>
-        <clipPath id="clip0_18_12807">
-          <rect width="24" height="24"></rect>
-        </clipPath>
-      </defs>
+      <path d="M15.721 2.158c.222.096.423.233.594.404l5.015 5.02a1.915 1.915 0 01-.58 3.104l-1.776.787-3.334 3.338-.264 3.671a1.915 1.915 0 01-3.265 1.216l-3.237-3.24L3.357 22 2 20.649l5.52-5.546-3.35-3.351a1.914 1.914 0 011.213-3.263l3.776-.283 3.275-3.278.769-1.774a1.915 1.915 0 012.518-.996zm-.761 1.757l-.914 2.108-4.034 4.04-4.487.335 7.94 7.947.316-4.383 4.09-4.095 2.105-.932-5.016-5.02z"></path>
     </svg>
   );
 };
 
 MapPin.propTypes = {
   color: PropTypes.string
-};
-
-MapPin.defaultProps = {
-  color: 'currentColor'
 };
 
 export default MapPin;

@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CodeBox = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M3 3h18a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v14h16V5H4zm16 7l-3.536 3.536-1.414-1.415L17.172 12 15.05 9.879l1.414-1.415L20 12zM6.828 12l2.122 2.121-1.414 1.415L4 12l3.536-3.536L8.95 9.88 6.828 12zm4.416 5H9.116l3.64-10h2.128l-3.64 10z"></path>
+      <g clipPath="url(#clip0_18_11599)">
+        <path d="M20 5a1 1 0 00-1-1H5a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1V5zM9.219 8.875a1 1 0 011.562 1.25L9.281 12l1.5 1.875.06.083a1 1 0 01-1.554 1.243l-.068-.076-2-2.5a1 1 0 010-1.25l2-2.5zm4.156-.156a1 1 0 011.338.08l.068.076 2 2.5a1 1 0 010 1.25l-2 2.5a1 1 0 01-1.562-1.25l1.5-1.875-1.5-1.875-.06-.083a1 1 0 01.216-1.323zM22 19a3 3 0 01-3 3H5a3 3 0 01-3-3V5a3 3 0 013-3h14a3 3 0 013 3v14z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_11599">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 CodeBox.propTypes = {
   color: PropTypes.string
-};
-
-CodeBox.defaultProps = {
-  color: 'currentColor'
 };
 
 export default CodeBox;

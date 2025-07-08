@@ -2,27 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CloudFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M17 7a8.003 8.003 0 00-7.493 5.19l1.874.703A6.002 6.002 0 0123 15a6 6 0 01-6 6H7A6 6 0 015.008 9.339a7 7 0 0113.757-2.143A8.028 8.028 0 0017 7z"></path>
+      <g clipPath="url(#clip0_18_15797)">
+        <path d="M12 2a8 8 0 017.987 8.428 7.502 7.502 0 00-7.04 1.111c-.438.335-.435.974-.045 1.364.39.39 1.02.382 1.475.069a5.5 5.5 0 018.203 2.424c.183.442.305.823.368 1.375C23.298 19.845 20.052 22 17 22H7a6 6 0 01-2.962-11.219A8 8 0 0112 2z"></path>
+        <path d="M23 17a5 5 0 11-10 0 5 5 0 0110 0z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15797">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 CloudFill.propTypes = {
   color: PropTypes.string
-};
-
-CloudFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default CloudFill;

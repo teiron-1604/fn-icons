@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FileCopy2Fill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +26,6 @@ const FileCopy2Fill = props => {
 
 FileCopy2Fill.propTypes = {
   color: PropTypes.string
-};
-
-FileCopy2Fill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FileCopy2Fill;

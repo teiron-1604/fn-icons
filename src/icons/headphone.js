@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Headphone = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 4a8 8 0 00-8 8h3a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-7C2 6.477 6.477 2 12 2s10 4.477 10 10v7a2 2 0 01-2 2h-3a2 2 0 01-2-2v-5a2 2 0 012-2h3a8 8 0 00-8-8zM4 14v5h3v-5H4zm13 0v5h3v-5h-3z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 4a8 8 0 00-8 8v1h2a3 3 0 013 3v3a3 3 0 01-3 3H5a3 3 0 01-3-3v-7a10 10 0 0120 0v7a3 3 0 01-3 3h-1a3 3 0 01-3-3v-3a3 3 0 013-3h2v-1a8 8 0 00-8-8zm8 11h-2a1 1 0 00-1 1v3a1 1 0 001 1h1a1 1 0 001-1v-4zM4 15v4a1 1 0 001 1h1a1 1 0 001-1v-3a1 1 0 00-1-1H4z"
+      ></path>
     </svg>
   );
 };
 
 Headphone.propTypes = {
   color: PropTypes.string
-};
-
-Headphone.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Headphone;

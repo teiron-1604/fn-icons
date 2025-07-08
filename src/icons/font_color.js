@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FontColor = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M15.246 14H8.754l-1.6 4H5l6-15h2l6 15h-2.154l-1.6-4zm-.8-2L12 5.885 9.554 12h4.892zM3 20h18v2H3v-2z"></path>
+      <g clipPath="url(#clip0_18_14285)">
+        <path d="M20 19a1 1 0 110 2H4a1 1 0 110-2h16zM12 3a1 1 0 01.895.553l6 12 .04.093a1 1 0 01-1.779.89l-.05-.089L15.381 13H8.618l-1.723 3.447a1 1 0 01-1.79-.894l6-12 .072-.121A1 1 0 0112 3zm-2.382 8h4.764L12 6.236 9.618 11z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_14285">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 FontColor.propTypes = {
   color: PropTypes.string
-};
-
-FontColor.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FontColor;

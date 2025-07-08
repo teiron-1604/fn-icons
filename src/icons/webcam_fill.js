@@ -2,18 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const WebcamFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15567)">
-        <path d="M11 21v-1.07A7.002 7.002 0 015 13V8a7 7 0 0114 0v5a7.002 7.002 0 01-6 6.93V21h4v2H7v-2h4zm1-12a1 1 0 110-2 1 1 0 010 2zm0 2a3 3 0 100-6 3 3 0 000 6z"></path>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1110 8.945V21h4a1 1 0 110 2H7a1 1 0 110-2h4v-2.055C6.5 18.448 3 14.633 3 10zm5 0a4 4 0 118 0 4 4 0 01-8 0z"
+        ></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15567">
@@ -26,10 +34,6 @@ const WebcamFill = props => {
 
 WebcamFill.propTypes = {
   color: PropTypes.string
-};
-
-WebcamFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default WebcamFill;

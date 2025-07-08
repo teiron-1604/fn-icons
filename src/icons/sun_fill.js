@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SunFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 18a6 6 0 110-12 6 6 0 010 12zm0-2a4 4 0 100-8 4 4 0 000 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93v-.001zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121v-.001zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path>
+      <g clipPath="url(#clip0_18_15808)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 1a1 1 0 011 1v2a1 1 0 11-2 0V2a1 1 0 011-1zM4.223 4.223a1 1 0 011.414 0l1.41 1.41a1 1 0 11-1.414 1.414l-1.41-1.41a1 1 0 010-1.414zm15.554 0a1 1 0 010 1.414l-1.41 1.41a1 1 0 11-1.414-1.414l1.41-1.41a1 1 0 011.414 0zM7 12a5 5 0 1110 0 5 5 0 01-10 0zm-6 0a1 1 0 011-1h2a1 1 0 110 2H2a1 1 0 01-1-1zm18 0a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zM7.047 16.953a1 1 0 010 1.414l-1.41 1.41a1 1 0 01-1.414-1.414l1.41-1.41a1 1 0 011.414 0zm9.906 0a1 1 0 011.414 0l1.41 1.41a1 1 0 01-1.414 1.414l-1.41-1.41a1 1 0 010-1.414zM12 19a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15808">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 SunFill.propTypes = {
   color: PropTypes.string
-};
-
-SunFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default SunFill;

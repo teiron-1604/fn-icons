@@ -2,18 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CheckDouble = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_14825)">
-        <path d="M11.602 13.76l1.412 1.412 8.466-8.466 1.414 1.414-9.88 9.88-6.364-6.364 1.414-1.414 2.125 2.125 1.413 1.412v.001zm.002-2.828l4.952-4.953 1.41 1.41-4.952 4.953-1.41-1.41zm-2.827 5.655L7.364 18 1 11.636l1.414-1.414 1.413 1.413-.001.001 4.951 4.951z"></path>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M18.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L7 15.586 17.293 5.293a1 1 0 011.414 0zm4 4a1 1 0 010 1.414l-7.5 7.5a1 1 0 01-1.414 0l-1.5-1.5a1 1 0 011.414-1.414l.793.793 6.793-6.793a1 1 0 011.414 0z"
+        ></path>
       </g>
       <defs>
         <clipPath id="clip0_18_14825">
@@ -26,10 +34,6 @@ const CheckDouble = props => {
 
 CheckDouble.propTypes = {
   color: PropTypes.string
-};
-
-CheckDouble.defaultProps = {
-  color: 'currentColor'
 };
 
 export default CheckDouble;

@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AlbumFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 14c2.213 0 4-1.787 4-4s-1.787-4-4-4-4 1.787-4 4 1.787 4 4 4zm0-5c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"></path>
+      <g clipPath="url(#clip0_18_15841)">
+        <path d="M21 5a1 1 0 011 1v13.5a2.5 2.5 0 01-2.5 2.5H6a1 1 0 110-2h13.5a.5.5 0 00.5-.5V6a1 1 0 011-1zm-4-3a2 2 0 012 2v13a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h13zM8.838 8.365a2 2 0 00-2.526-.135l-.148.12L4 10.273v2.675l3.492-3.103 4.835 4.395.08.065a1 1 0 001.338-1.472l-.072-.073-1.255-1.14 1.614-1.346L17 12.5V10l-1.768-1.325a2 2 0 00-2.342-.041l-.138.104-1.828 1.523-2.086-1.896z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15841">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 AlbumFill.propTypes = {
   color: PropTypes.string
-};
-
-AlbumFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default AlbumFill;

@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Microphone = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 3a3 3 0 00-3 3v4a3 3 0 006 0V6a3 3 0 00-3-3zm0-2a5 5 0 015 5v4a5 5 0 11-10 0V6a5 5 0 015-5zM3.055 11H5.07a7.002 7.002 0 0013.858 0h2.016A9.004 9.004 0 0113 18.945V23h-2v-4.055A9.004 9.004 0 013.055 11z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9.172 2.172A4 4 0 0116 5v7a4 4 0 11-8 0V5a4 4 0 011.172-2.828zM12 3a2 2 0 00-2 2v7a2 2 0 004 0V5a2 2 0 00-2-2zM5 9a1 1 0 011 1v2a6 6 0 1012 0v-2a1 1 0 112 0v2a8 8 0 01-7 7.937V22a1 1 0 11-2 0v-2.063A8 8 0 014 12v-2a1 1 0 011-1z"
+      ></path>
     </svg>
   );
 };
 
 Microphone.propTypes = {
   color: PropTypes.string
-};
-
-Microphone.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Microphone;

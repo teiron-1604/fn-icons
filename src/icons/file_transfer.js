@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FileTransfer = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M15 4H5v16h14V8h-4V4zM3 2.992C3 2.444 3.447 2 3.999 2H16l5 5v13.993A1 1 0 0120.007 22H3.993A1 1 0 013 21.008V2.992zM12 11V8l4 4-4 4v-3H8v-2h4z"></path>
+      <g clipPath="url(#clip0_18_12951)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M3.879 1.879A3 3 0 016 1h9a1 1 0 01.707.293l5 5A1 1 0 0121 7v13a3 3 0 01-3 3H4a1 1 0 110-2h14a1 1 0 001-1V9h-3a3 3 0 01-3-3V3H6a1 1 0 00-1 1v4a1 1 0 01-2 0V4a3 3 0 01.879-2.121zM15 3.414V6a1 1 0 001 1h2.586L15 3.414zm-6.707 7.879a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L9.586 16H2a1 1 0 110-2h7.586l-1.293-1.293a1 1 0 010-1.414z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_12951">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 FileTransfer.propTypes = {
   color: PropTypes.string
-};
-
-FileTransfer.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FileTransfer;

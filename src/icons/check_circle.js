@@ -2,27 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CheckCircle = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12.5 22c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16.001A8 8 0 0012.5 20zm-.997-4L7.26 11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.503 16z"></path>
+      <path d="M8 12l2.5 2.5 5-5M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12zm15.207-3.207a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2.5-2.5a1 1 0 111.414-1.414l1.793 1.793 4.293-4.293a1 1 0 011.414 0z"
+      ></path>
     </svg>
   );
 };
 
 CheckCircle.propTypes = {
   color: PropTypes.string
-};
-
-CheckCircle.defaultProps = {
-  color: 'currentColor'
 };
 
 export default CheckCircle;

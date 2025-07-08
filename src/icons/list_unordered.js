@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListUnordered = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 7a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 6.9a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"></path>
+      <g clipPath="url(#clip0_18_14360)">
+        <path d="M2.01 19l.102.005a1 1 0 010 1.99L2.01 21H2a1 1 0 110-2h.01zM22 19a1 1 0 110 2H7a1 1 0 110-2h15zM2.01 11l.102.005a1 1 0 010 1.99L2.01 13H2a1 1 0 110-2h.01zM22 11a1 1 0 110 2H7a1 1 0 110-2h15zM2.01 3l.102.005a1 1 0 010 1.99L2.01 5H2a1 1 0 010-2h.01zM22 3a1 1 0 110 2H7a1 1 0 010-2h15z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_14360">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 ListUnordered.propTypes = {
   color: PropTypes.string
-};
-
-ListUnordered.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ListUnordered;

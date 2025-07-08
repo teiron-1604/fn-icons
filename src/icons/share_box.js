@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ShareBox = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M10 3v2H5v14h14v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h6zm7.586 2H13V3h8v8h-2V6.414l-7 7L10.586 12l7-7z"></path>
+      <g clipPath="url(#clip0_18_14859)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M5 4a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1v-6a1 1 0 112 0v6a3 3 0 01-3 3H5a3 3 0 01-3-3V5a3 3 0 013-3h6a1 1 0 110 2H5zm10 0a1 1 0 110-2h6a1 1 0 011 1v6a1 1 0 11-2 0V5.414l-7.293 7.293a1 1 0 01-1.414-1.414L18.586 4H15z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_14859">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 ShareBox.propTypes = {
   color: PropTypes.string
-};
-
-ShareBox.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ShareBox;

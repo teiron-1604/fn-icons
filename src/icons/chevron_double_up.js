@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ChevronDoubleUp = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M7.2 10.8L12 6l4.8 4.8M7.2 18l4.8-4.8 4.8 4.8"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6.293 18.707a1 1 0 001.414 0L12 14.414l4.293 4.293a1 1 0 001.414-1.414l-5-5a1 1 0 00-1.414 0l-5 5a1 1 0 000 1.414zm0-7a1 1 0 001.414 0L12 7.414l4.293 4.293a1 1 0 001.414-1.414l-5-5a1 1 0 00-1.414 0l-5 5a1 1 0 000 1.414z"
+      ></path>
     </svg>
   );
 };
 
 ChevronDoubleUp.propTypes = {
   color: PropTypes.string
-};
-
-ChevronDoubleUp.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ChevronDoubleUp;

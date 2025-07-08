@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Alert = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_14764)">
-        <path d="M12.866 3l9.526 16.5a1 1 0 01-.866 1.5H2.474a1 1 0 01-.866-1.5L11.134 3a1 1 0 011.732 0zm-8.66 16h15.588L12 5.5 4.206 19zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z"></path>
+        <path d="M12.187 1.993a3 3 0 012.41 1.51L22.595 17.5l.093.174A3 3 0 0119.998 22h-16v-.001a2.999 2.999 0 01-2.618-4.495H1.38l8-14a3 3 0 012.608-1.518l.199.007zm-.33 2.002a1 1 0 00-.739.498v.003l-8 14-.004.004a1.002 1.002 0 00.372 1.37 1 1 0 00.503.13h16.008a1.002 1.002 0 001-1 1 1 0 00-.135-.5l-.002-.004-8-14-.002-.003a1 1 0 00-.87-.507l-.131.01zM12.008 16a1 1 0 010 2h-.01a1 1 0 010-2h.01zm-1.01-3V9a1 1 0 012 0v4a1 1 0 01-2 0z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_14764">
@@ -26,10 +30,6 @@ const Alert = props => {
 
 Alert.propTypes = {
   color: PropTypes.string
-};
-
-Alert.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Alert;

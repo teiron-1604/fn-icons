@@ -2,31 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ScreenRotation = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M4 4v16h8V4H4zm-.2-2A1.8 1.8 0 002 3.8v16.4A1.8 1.8 0 003.8 22h8.4c.287 0 .559-.067.8-.187V22h6.6a2.4 2.4 0 002.4-2.4v-7.2a2.4 2.4 0 00-2.4-2.4H14V3.8A1.8 1.8 0 0012.2 2H3.8zm15.8 18H14v-8h5.6c.22 0 .4.18.4.4v7.2a.4.4 0 01-.4.4zM15.5 2a1 1 0 100 2A4.5 4.5 0 0120 8.5a1 1 0 102 0A6.5 6.5 0 0015.5 2z"
-      ></path>
+      <g clipPath="url(#clip0_18_15625)">
+        <path d="M10.2 2A2.8 2.8 0 0113 4.8V11h6.2l.286.015A2.8 2.8 0 0122 13.8v5.4a2.8 2.8 0 01-2.8 2.8H4.8A2.8 2.8 0 012 19.2V4.8A2.8 2.8 0 014.8 2h5.4zM4.8 4a.8.8 0 00-.8.8v14.4a.8.8 0 00.8.8H11V4.8a.8.8 0 00-.8-.8H4.8zM13 20h6.2a.8.8 0 00.8-.8v-5.4a.8.8 0 00-.718-.796L19.2 13H13v7zm2.6-18A6.4 6.4 0 0122 8.4a1 1 0 01-2 0A4.4 4.4 0 0015.6 4a1 1 0 110-2z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15625">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 ScreenRotation.propTypes = {
   color: PropTypes.string
-};
-
-ScreenRotation.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ScreenRotation;

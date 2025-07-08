@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Check = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M10.5 15.172l9.192-9.193 1.415 1.414L10.5 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z"
+      ></path>
     </svg>
   );
 };
 
 Check.propTypes = {
   color: PropTypes.string
-};
-
-Check.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Check;

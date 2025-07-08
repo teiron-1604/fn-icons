@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const VolumeVibrate = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15538)">
-        <path d="M19.39 3.16l1.413 1.415-2.475 2.475 2.475 2.475L18.328 12l2.475 2.476-2.475 2.475 2.475 2.475-1.414 1.414-3.889-3.89 2.475-2.474L15.5 12l2.475-2.475L15.5 7.05l3.89-3.89zm-6.503.579a.5.5 0 01.113.316v15.89a.5.5 0 01-.817.387L6.89 15.999H3a1 1 0 01-1-1V9a1 1 0 011-1h3.889l5.294-4.331a.5.5 0 01.704.07zM11 7.219L7.603 10H4v4h3.603L11 16.779v-9.56z"></path>
+        <path d="M11.088 3.01c.25-.03.502-.005.741.074l.118.044.115.052c.224.113.42.274.576.472l.074.103.066.107c.145.255.221.544.222.838v14.597l-.005.126a1.704 1.704 0 01-2.907 1.08l-3.384-3.385A.403.403 0 006.42 17H4a2 2 0 01-1.99-1.803L2 15V9a2 2 0 012-2h2.419l.08-.008a.4.4 0 00.205-.11l3.387-3.386.092-.086c.222-.191.49-.322.78-.38l.125-.02zm8.113.215a1 1 0 011.407 1.406l-.068.076-1.96 1.959 1.96 1.96a1 1 0 010 1.414L18.58 12l1.96 1.96a1 1 0 010 1.414l-1.96 1.959 1.96 1.96.068.076a1 1 0 01-1.407 1.406l-.075-.068-2.667-2.667a1 1 0 010-1.414l1.959-1.96-1.959-1.959a1 1 0 010-1.414l1.959-1.96-1.959-1.96a1 1 0 010-1.413l2.667-2.667.075-.068zM8.121 8.294a2.4 2.4 0 01-1.705.705H4v6h2.416a2.403 2.403 0 011.704.707l2.88 2.88V5.414l-2.88 2.88z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15538">
@@ -26,10 +30,6 @@ const VolumeVibrate = props => {
 
 VolumeVibrate.propTypes = {
   color: PropTypes.string
-};
-
-VolumeVibrate.defaultProps = {
-  color: 'currentColor'
 };
 
 export default VolumeVibrate;

@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RecordCircleFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_15442)">
-        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-7a3 3 0 100-6 3 3 0 000 6z"></path>
+        <path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 7a4 4 0 100 8 4 4 0 000-8z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_15442">
@@ -26,10 +30,6 @@ const RecordCircleFill = props => {
 
 RecordCircleFill.propTypes = {
   color: PropTypes.string
-};
-
-RecordCircleFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default RecordCircleFill;

@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DashCircle = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path
-        d="M12.4 22c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16.001A8 8 0 0012.4 20zm-5-9h10v2h-10v-2z"
+        d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 2a9 9 0 100 18 9 9 0 000-18zm4 8a1 1 0 110 2H8a1 1 0 110-2h8z"
         opacity=".9"
       ></path>
     </svg>
@@ -22,10 +26,6 @@ const DashCircle = props => {
 
 DashCircle.propTypes = {
   color: PropTypes.string
-};
-
-DashCircle.defaultProps = {
-  color: 'currentColor'
 };
 
 export default DashCircle;

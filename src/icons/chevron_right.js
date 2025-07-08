@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ChevronRight = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415L12.172 12z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.457 11.543a1 1 0 010 1.414l-3.5 3.5a1 1 0 01-1.414-1.414l2.793-2.793-2.793-2.793a1 1 0 011.414-1.414l3.5 3.5z"
+      ></path>
     </svg>
   );
 };
 
 ChevronRight.propTypes = {
   color: PropTypes.string
-};
-
-ChevronRight.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ChevronRight;

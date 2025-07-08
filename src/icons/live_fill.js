@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LiveFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M16 4a1 1 0 011 1v4.2l5.213-3.65a.5.5 0 01.787.41v12.08a.5.5 0 01-.787.41L17 14.8V19a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1h14zM7.4 8.829a.4.4 0 00-.392.32L7 9.228v5.542a.4.4 0 00.542.374l.073-.036 4.355-2.772a.4.4 0 00.063-.624l-.063-.05L7.615 8.89a.4.4 0 00-.215-.06v-.001z"></path>
+      <g clipPath="url(#clip0_18_15247)">
+        <path d="M17 6.5c0 1.273-.68 2.388-1.697 3H16.5a2 2 0 012 2v.46l3.094-1.374A1 1 0 0123 11.5v8a1 1 0 01-1.406.914L18.5 19.04v.461a2 2 0 01-2 2H3a2 2 0 01-2-2v-8a2 2 0 012-2h1.697a3.5 3.5 0 113.605 0h3.395A3.5 3.5 0 1117 6.5z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_15247">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 LiveFill.propTypes = {
   color: PropTypes.string
-};
-
-LiveFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default LiveFill;

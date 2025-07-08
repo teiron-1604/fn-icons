@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ServerDown = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M9 2v2H5l-.001 10h14L19 4h-4V2h5a1 1 0 011 1v18a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1h5zm9.999 14h-14L5 20h14l-.001-4zM17 17v2h-2v-2h2zM13 2v5h3l-4 4-4-4h3V2h2z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M16.707 6.707l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L11 7.586V2a1 1 0 112 0v5.586l2.293-2.293a1 1 0 111.414 1.414zM3 16a1 1 0 011-1h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zm1-3a3 3 0 00-3 3v4a3 3 0 003 3h16a3 3 0 003-3v-4a3 3 0 00-3-3H4zm2 4a1 1 0 100 2h.01a1 1 0 100-2H6zm4 0a1 1 0 100 2h.01a1 1 0 100-2H10z"
+      ></path>
     </svg>
   );
 };
 
 ServerDown.propTypes = {
   color: PropTypes.string
-};
-
-ServerDown.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ServerDown;

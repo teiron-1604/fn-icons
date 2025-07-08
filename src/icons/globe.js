@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Globe = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 018.027 13H4.062a8.008 8.008 0 005.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.906 15.906 0 0013.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 01-1.683 6.667A8.008 8.008 0 0019.938 13zM4.062 11h3.965A17.9 17.9 0 019.71 4.333 8.008 8.008 0 004.062 11zm5.969 0h3.938A15.904 15.904 0 0012 4.248 15.906 15.906 0 0010.03 11h.001zm4.259-6.667A17.9 17.9 0 0115.973 11h3.965a8.008 8.008 0 00-5.648-6.667z"></path>
+      <g clipPath="url(#clip0_18_14091)">
+        <path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zM3.057 13a9.004 9.004 0 006.61 7.692A15.5 15.5 0 017.033 13H3.057zm13.91 0a15.5 15.5 0 01-2.635 7.692A9.004 9.004 0 0020.943 13h-3.976zm-7.93 0A13.5 13.5 0 0012 20.483 13.5 13.5 0 0014.963 13H9.037zm5.295-9.693A15.5 15.5 0 0116.967 11h3.976a9.005 9.005 0 00-6.611-7.693zM12 3.516A13.5 13.5 0 009.037 11h5.926A13.5 13.5 0 0012 3.516zm-2.333-.21A9.005 9.005 0 003.057 11h3.976a15.5 15.5 0 012.634-7.693z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_14091">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 Globe.propTypes = {
   color: PropTypes.string
-};
-
-Globe.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Globe;

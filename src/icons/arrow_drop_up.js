@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowDropUp = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 11.828l-2.828 2.829-1.415-1.414L12 9l4.243 4.243-1.415 1.414L12 11.828z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.793 9.293a1 1 0 011.414 0l3.5 3.5a1 1 0 01-1.414 1.414L11.5 11.414l-2.793 2.793a1 1 0 01-1.414-1.414l3.5-3.5z"
+      ></path>
     </svg>
   );
 };
 
 ArrowDropUp.propTypes = {
   color: PropTypes.string
-};
-
-ArrowDropUp.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ArrowDropUp;

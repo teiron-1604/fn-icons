@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowLeftUpFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_12449)">
-        <path d="M12.36 10.947l5.658 5.656-1.415 1.415-5.656-5.657-4.95 4.95V5.997H17.31l-4.95 4.95z"></path>
+        <path d="M4.136 5.61a1 1 0 01.972-.973l13.082-.353a1 1 0 01.734 1.706l-3.536 3.535 5.657 5.657a1 1 0 010 1.414l-4.95 4.95-.076.07a1 1 0 01-1.338-.07L9.024 15.89 5.49 19.425l-.116.099a1 1 0 01-1.59-.833l.353-13.082z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_12449">
@@ -26,10 +30,6 @@ const ArrowLeftUpFill = props => {
 
 ArrowLeftUpFill.propTypes = {
   color: PropTypes.string
-};
-
-ArrowLeftUpFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default ArrowLeftUpFill;

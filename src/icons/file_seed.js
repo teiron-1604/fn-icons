@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FileSeed = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path d="M15.812 18h-1.059c-.184 0-.277-.088-.277-.264v-6.313c0-.092-.046-.139-.139-.139h-1.436c-.176 0-.264-.088-.264-.264v-.857c0-.176.088-.265.264-.265h4.763c.176 0 .264.089.264.265v.857c0 .176-.088.264-.264.264h-1.437c-.1 0-.15.047-.15.139v6.313c0 .176-.089.264-.265.264z"></path>
@@ -29,10 +33,6 @@ const FileSeed = props => {
 
 FileSeed.propTypes = {
   color: PropTypes.string
-};
-
-FileSeed.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FileSeed;

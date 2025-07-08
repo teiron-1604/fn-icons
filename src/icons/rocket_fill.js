@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RocketFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path d="M8.498 20h7.004A6.523 6.523 0 0112 23.502 6.523 6.523 0 018.498 20zM18 14.805l2 2.268V19H4v-1.927l2-2.268V9c0-3.483 2.504-6.447 6-7.545C15.496 2.553 18 5.517 18 9v5.805zM12 11a2 2 0 100-4 2 2 0 000 4z"></path>
@@ -19,10 +23,6 @@ const RocketFill = props => {
 
 RocketFill.propTypes = {
   color: PropTypes.string
-};
-
-RocketFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default RocketFill;

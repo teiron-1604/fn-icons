@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FastForward = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 13.333l-9.223 6.149A.5.5 0 012 19.066V4.934a.5.5 0 01.777-.416L12 10.667V4.934a.5.5 0 01.777-.416l10.599 7.066a.5.5 0 010 .832l-10.599 7.066a.5.5 0 01-.777-.416v-5.733zM10.394 12L4 7.737v8.526L10.394 12zM14 7.737v8.526L20.394 12 14 7.737z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.56 4.102a1 1 0 011.054.109l9 7a1 1 0 010 1.578l-9 7A1 1 0 011 19V5a1 1 0 01.56-.898zm11 0a1 1 0 011.054.109l9 7a1 1 0 010 1.578l-9 7A1 1 0 0112 19V5a1 1 0 01.56-.898zM3 7.045v9.91L9.371 12 3 7.045zm11 0v9.91L20.371 12 14 7.045z"
+      ></path>
     </svg>
   );
 };
 
 FastForward.propTypes = {
   color: PropTypes.string
-};
-
-FastForward.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FastForward;

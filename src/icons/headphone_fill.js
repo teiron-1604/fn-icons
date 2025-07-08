@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const HeadphoneFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M4 12h3a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-7C2 6.477 6.477 2 12 2s10 4.477 10 10v7a2 2 0 01-2 2h-3a2 2 0 01-2-2v-5a2 2 0 012-2h3a8 8 0 00-16 0z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 4a8 8 0 00-8 8v1h2a3 3 0 013 3v3a3 3 0 01-3 3H5a3 3 0 01-3-3v-7a10 10 0 0120 0v7a3 3 0 01-3 3h-1a3 3 0 01-3-3v-3a3 3 0 013-3h2v-1a8 8 0 00-8-8z"
+      ></path>
     </svg>
   );
 };
 
 HeadphoneFill.propTypes = {
   color: PropTypes.string
-};
-
-HeadphoneFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default HeadphoneFill;

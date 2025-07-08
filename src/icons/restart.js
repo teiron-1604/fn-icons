@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Restart = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M18.537 19.567A9.962 9.962 0 0112 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 10-2.46 5.772l.997 1.795z"></path>
+      <g clipPath="url(#clip0_18_13510)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 4a8 8 0 108 8 1 1 0 112 0A10 10 0 1112 2c2.786 0 5.442 1.105 7.433 3.02l.014.013.553.553V3a1 1 0 112 0v5a1 1 0 01-1 1h-5a1 1 0 110-2h2.586l-.546-.546C16.412 4.892 14.251 4 12 4z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_13510">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 Restart.propTypes = {
   color: PropTypes.string
-};
-
-Restart.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Restart;

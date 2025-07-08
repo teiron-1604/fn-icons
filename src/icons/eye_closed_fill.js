@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const EyeClosedFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M10.13 15.842l-.788 2.94-1.931-.518.787-2.94a10.988 10.988 0 01-3.237-1.871l-2.153 2.154-1.415-1.415 2.154-2.153a10.957 10.957 0 01-2.371-5.07l.9-.165A16.923 16.923 0 0012 10c3.704 0 7.131-1.185 9.924-3.196l.9.164a10.957 10.957 0 01-2.37 5.07l2.153 2.154-1.415 1.415-2.153-2.154a10.987 10.987 0 01-3.237 1.872l.787 2.94-1.931.517-.788-2.94a11.07 11.07 0 01-3.74 0z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1.657 6.06a1 1 0 011.283.597 9.645 9.645 0 0018.12 0 1 1 0 111.88.686 11.645 11.645 0 01-3.242 4.745l1.067 1.268a1 1 0 01-1.53 1.288l-1.149-1.365c-.825.506-1.706.905-2.623 1.19l.514 2.314a1 1 0 11-1.953.434l-.515-2.32a11.643 11.643 0 01-3.017 0l-.516 2.32a1 1 0 11-1.952-.434l.514-2.314a11.645 11.645 0 01-2.624-1.19l-1.149 1.365a1 1 0 01-1.53-1.288l1.067-1.268a11.645 11.645 0 01-3.241-4.745 1 1 0 01.596-1.283z"
+      ></path>
     </svg>
   );
 };
 
 EyeClosedFill.propTypes = {
   color: PropTypes.string
-};
-
-EyeClosedFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default EyeClosedFill;

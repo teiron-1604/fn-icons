@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilmFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM4 5v2h2V5H4zm14 0v2h2V5h-2zM4 9v2h2V9H4zm14 0v2h2V9h-2zM4 13v2h2v-2H4zm14 0v2h2v-2h-2zM4 17v2h2v-2H4zm14 0v2h2v-2h-2z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5 4a1 1 0 00-1 1v1.5h2V4H5zm0-2a3 3 0 00-3 3v14a3 3 0 003 3h14a3 3 0 003-3V5a3 3 0 00-3-3H5zm13 2v2.5h2V5a1 1 0 00-1-1h-1zm2 4.5h-2V11h2V8.5zm0 4.5h-2v2.5h2V13zm0 4.5h-2V20h1a1 1 0 001-1v-1.5zM6 20v-2.5H4V19a1 1 0 001 1h1zm-2-4.5h2V13H4v2.5zM4 11h2V8.5H4V11z"
+      ></path>
     </svg>
   );
 };
 
 FilmFill.propTypes = {
   color: PropTypes.string
-};
-
-FilmFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default FilmFill;

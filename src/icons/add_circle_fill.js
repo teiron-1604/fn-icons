@@ -2,18 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AddCircleFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <path
-        d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12zm11 5a1 1 0 01-1-1v-3H8a1 1 0 110-2h3V8a1 1 0 112 0v3h3a1 1 0 110 2h-3v3a1 1 0 01-1 1z"
         opacity=".9"
       ></path>
     </svg>
@@ -22,10 +28,6 @@ const AddCircleFill = props => {
 
 AddCircleFill.propTypes = {
   color: PropTypes.string
-};
-
-AddCircleFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default AddCircleFill;

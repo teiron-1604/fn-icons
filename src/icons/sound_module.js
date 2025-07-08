@@ -2,21 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SoundModule = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <g clipPath="url(#clip0_18_15593)">
-        <path d="M21 18v3h-2v-3h-2v-2h6v2h-2zM5 18v3H3v-3H1v-2h6v2H5zm6-12V3h2v3h2v2H9V6h2zm0 4h2v11h-2V10zm-8 4V3h2v11H3zm16 0V3h2v11h-2z"></path>
+      <g clipPath="url(#clip0_1624_201)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4 2a1 1 0 011 1v7a1 1 0 11-2 0V3a1 1 0 011-1zm8 0a1 1 0 011 1v4h1a1 1 0 110 2h-4a1 1 0 010-2h1V3a1 1 0 011-1zm8 0a1 1 0 011 1v9a1 1 0 11-2 0V3a1 1 0 011-1zm-8 9a1 1 0 011 1v9a1 1 0 11-2 0v-9a1 1 0 011-1zM1 14a1 1 0 011-1h4a1 1 0 110 2H5v6a1 1 0 11-2 0v-6H2a1 1 0 01-1-1zm16 2a1 1 0 011-1h4a1 1 0 110 2h-1v4a1 1 0 11-2 0v-4h-1a1 1 0 01-1-1z"
+        ></path>
       </g>
       <defs>
-        <clipPath id="clip0_18_15593">
+        <clipPath id="clip0_1624_201">
           <rect width="24" height="24"></rect>
         </clipPath>
       </defs>
@@ -26,10 +34,6 @@ const SoundModule = props => {
 
 SoundModule.propTypes = {
   color: PropTypes.string
-};
-
-SoundModule.defaultProps = {
-  color: 'currentColor'
 };
 
 export default SoundModule;

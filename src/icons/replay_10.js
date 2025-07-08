@@ -1,0 +1,35 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Replay10 = props => {
+  const { color = 'currentColor', ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...otherProps}
+    >
+      <g clipPath="url(#clip0_523_25)">
+        <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.967 9.967 0 01-6.724-2.598l-.347-.33-.069-.077a1 1 0 011.408-1.407l.075.07.278.264a8 8 0 100-11.844l-.278.265c-.28.279-.68.711-1.09 1.157H7a1 1 0 010 2H3l-.023-.002h-.038a1.004 1.004 0 01-.126-.017l-.018-.002a1 1 0 01-.066-.017l-.045-.014-.022-.008a.995.995 0 01-.123-.053l-.021-.012a.999.999 0 01-.053-.031c-.011-.007-.023-.014-.033-.022a1.01 1.01 0 01-.055-.04l-.02-.016-.021-.018-.032-.031-.011-.01-.03-.03c-.01-.01-.018-.022-.027-.032l-.02-.025a.99.99 0 01-.06-.084l-.028-.049-.014-.023a.987.987 0 01-.048-.107l-.012-.034a.985.985 0 01-.03-.105l-.006-.032a1.003 1.003 0 01-.01-.058l-.005-.053-.001-.044L2 8.5v-4a1 1 0 012 0v1.407c.344-.371.676-.726.929-.978l.347-.331A9.967 9.967 0 0112 2zM9 9a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm5 0a2.5 2.5 0 012.5 2.5v2a2.5 2.5 0 01-5 0v-2A2.5 2.5 0 0114 9zm0 2a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_523_25">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+Replay10.propTypes = {
+  color: PropTypes.string
+};
+
+export default Replay10;

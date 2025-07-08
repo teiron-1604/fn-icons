@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PlayMiniFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M6 17.01V6.99c0-1.278 1.424-2.04 2.488-1.332l7.515 5.01a1.6 1.6 0 010 2.663l-7.515 5.01C7.424 19.052 6 18.289 6 17.012z"></path>
+      <path d="M7.853 5.122c.32-.175.712-.16 1.02.037l9.333 6a1 1 0 010 1.682l-9.333 6A1.001 1.001 0 017.332 18V6l.009-.136a1 1 0 01.512-.742z"></path>
     </svg>
   );
 };
 
 PlayMiniFill.propTypes = {
   color: PropTypes.string
-};
-
-PlayMiniFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default PlayMiniFill;

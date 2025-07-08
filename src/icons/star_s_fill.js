@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const StarSFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_14688)">
-        <path d="M12 17l-5.878 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.866.55-5.231 4.48 1.598 6.7L12 17z"></path>
+        <path d="M12.198 2.922c.13.018.258.055.378.108l.176.092.16.116c.101.085.19.183.265.291l.1.171v.001l1.848 3.743.042.074a.702.702 0 00.483.307l4.132.605h-.002c.197.028.386.098.553.203l.16.117.143.139c.088.098.162.207.22.326l.075.183.048.193c.023.13.027.262.013.393l-.033.197a1.425 1.425 0 01-.389.677v.001l-2.989 2.91a.7.7 0 00-.2.618l.704 4.106.02.198A1.424 1.424 0 0116.02 20V20l-3.695-1.942a.7.7 0 00-.239-.075L12 17.978a.7.7 0 00-.324.079h.001l-3.692 1.941V20a1.426 1.426 0 01-2.069-1.5l.705-4.112.01-.084a.697.697 0 00-.153-.471l-.058-.063-2.988-2.909A1.424 1.424 0 013.07 9.4l.075-.185c.087-.179.21-.338.363-.467l.161-.117c.112-.07.234-.124.361-.16l.195-.042 4.127-.604.083-.017a.702.702 0 00.442-.364l1.847-3.743.1-.172a1.43 1.43 0 01.426-.407l.175-.092c.18-.08.377-.122.576-.122l.197.014z"></path>
       </g>
       <defs>
         <clipPath id="clip0_18_14688">
@@ -26,10 +30,6 @@ const StarSFill = props => {
 
 StarSFill.propTypes = {
   color: PropTypes.string
-};
-
-StarSFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default StarSFill;

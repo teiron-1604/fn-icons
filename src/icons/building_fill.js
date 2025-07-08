@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BuildingFill = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 19h2V6l6.394 2.74a1 1 0 01.606.92V19h2v2H1v-2h2V5.65a1 1 0 01.594-.914l7.703-3.424A.5.5 0 0112 1.77V19z"></path>
+      <g clipPath="url(#clip0_18_12651)">
+        <path d="M19 1a2 2 0 012 2v17h1a1 1 0 110 2H2a1 1 0 110-2h1v-8a2 2 0 012-2h4V3a2 2 0 012-2h8zM6 15.004a1 1 0 000 2h2a1 1 0 100-2H6zm8 0a1 1 0 000 2h2a1 1 0 100-2h-2zm0-4.5a1 1 0 000 2h2a1 1 0 100-2h-2zm0-4.5a1 1 0 000 2h2a1 1 0 100-2h-2z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_12651">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 BuildingFill.propTypes = {
   color: PropTypes.string
-};
-
-BuildingFill.defaultProps = {
-  color: 'currentColor'
 };
 
 export default BuildingFill;

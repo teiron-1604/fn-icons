@@ -2,18 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Radar = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
       <g clipPath="url(#clip0_18_13555)">
-        <path d="M5.671 4.257L13.414 12 12 13.414l-6.32-6.32a8 8 0 103.706-2.658L7.85 2.9A9.963 9.963 0 0112 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12a9.98 9.98 0 013.671-7.743z"></path>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 1c3.05 0 5.812 1.243 7.804 3.248a1 1 0 01-.006 1.415l-5.132 5.075c.182.383.287.81.287 1.262A2.953 2.953 0 1112 9.047c.447 0 .87.102 1.249.28l4.389-4.34a9 9 0 103.254 5.61l-.083-.453-.016-.102a1 1 0 011.947-.408l.026.1.101.553c.088.559.133 1.13.133 1.713 0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 9.953a1.047 1.047 0 100 2.094 1.047 1.047 0 000-2.094z"
+        ></path>
       </g>
       <defs>
         <clipPath id="clip0_18_13555">
@@ -26,10 +34,6 @@ const Radar = props => {
 
 Radar.propTypes = {
   color: PropTypes.string
-};
-
-Radar.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Radar;

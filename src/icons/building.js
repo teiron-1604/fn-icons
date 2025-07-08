@@ -2,27 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Building = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M3 19V5.7a1 1 0 01.658-.94l9.671-3.516a.5.5 0 01.671.47v4.953l6.316 2.105a1 1 0 01.684.949V19h2v2H1v-2h2zm2 0h7V3.855L5 6.401V19zm14 0v-8.558l-5-1.667V19h5z"></path>
+      <g clipPath="url(#clip0_18_12647)">
+        <path d="M11 3v17h8V3h-8zM8 15.004l.103.006a1 1 0 010 1.989L8 17.004H6a1 1 0 110-2h2zm8 0l.102.006a1 1 0 010 1.989l-.102.005h-2a1 1 0 110-2h2zm0-4.5l.102.006a1 1 0 010 1.989l-.102.005h-2a1 1 0 110-2h2zm0-4.5l.102.006a1 1 0 010 1.989L16 8.004h-2a1 1 0 110-2h2zM5 20h4v-8H5v8zm16 0h1a1 1 0 110 2H2a1 1 0 110-2h1v-8a2 2 0 012-2h4V3a2 2 0 012-2h8a2 2 0 012 2v17z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_12647">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 Building.propTypes = {
   color: PropTypes.string
-};
-
-Building.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Building;

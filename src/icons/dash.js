@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Dash = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M5 11h14v2H5v-2z"></path>
+      <path d="M3 12h18"></path>
     </svg>
   );
 };
 
 Dash.propTypes = {
   color: PropTypes.string
-};
-
-Dash.defaultProps = {
-  color: 'currentColor'
 };
 
 export default Dash;

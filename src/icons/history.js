@@ -2,27 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const History = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2a8 8 0 101.865-5.135L8 9H2V3l2.447 2.446A9.98 9.98 0 0112 2zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"></path>
+      <g clipPath="url(#clip0_18_14889)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M11.996 2H12A10 10 0 112 12a1 1 0 112 0 8 8 0 108.002-8A8.75 8.75 0 005.96 6.453L5.414 7H8a1 1 0 110 2H3a1 1 0 01-1-1V3a1 1 0 112 0v2.586l.553-.553.012-.012A10.75 10.75 0 0111.996 2zM12 6a1 1 0 011 1v4.382l3.447 1.724a1 1 0 11-.894 1.788l-4-2A1 1 0 0111 12V7a1 1 0 011-1z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_18_14889">
+          <rect width="24" height="24"></rect>
+        </clipPath>
+      </defs>
     </svg>
   );
 };
 
 History.propTypes = {
   color: PropTypes.string
-};
-
-History.defaultProps = {
-  color: 'currentColor'
 };
 
 export default History;

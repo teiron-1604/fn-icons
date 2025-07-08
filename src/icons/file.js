@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const File = props => {
-  const { color, ...otherProps } = props;
+  const { color = 'currentColor', ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill={color}
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M21 8v12.993A1 1 0 0120.007 22H3.993A.993.993 0 013 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8zm-2 1h-5V4H5v16h14V9z"></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M3.879 1.879A3 3 0 016 1h9a1 1 0 01.707.293l5 5A1 1 0 0121 7v13a3 3 0 01-3 3H6a3 3 0 01-3-3V4a3 3 0 01.879-2.121zM18.586 7H16a1 1 0 01-1-1V3.414L18.586 7zM13 3v3a3 3 0 003 3h3v11a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1h7z"
+      ></path>
     </svg>
   );
 };
 
 File.propTypes = {
   color: PropTypes.string
-};
-
-File.defaultProps = {
-  color: 'currentColor'
 };
 
 export default File;
