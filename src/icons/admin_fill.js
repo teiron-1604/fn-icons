@@ -9,11 +9,7 @@ const AdminFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M18.058 11.5a2.778 2.778 0 012.777 2.777v.784a1.888 1.888 0 011.778 1.883v2.667a1.89 1.89 0 01-1.888 1.889H15.39a1.889 1.889 0 01-1.889-1.889v-2.667c0-1.005.786-1.826 1.777-1.883v-.784a2.778 2.778 0 012.779-2.777zm-2.556 8h5.111v-2.444h-5.111V19.5zm2.556-6a.778.778 0 00-.779.777v.779h1.556v-.779l-.004-.076a.779.779 0 00-.773-.701z"></path>

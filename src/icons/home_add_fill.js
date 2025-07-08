@@ -9,11 +9,7 @@ const HomeAddFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M12 2.268c.222 0 .439.074.614.21l8 6.222a1 1 0 01.386.79V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.49a1 1 0 01.386-.79l8-6.221c.175-.137.392-.211.614-.211zm-1 7.356v2.375H8.625v2H11v2.375h2v-2.375h2.375v-2H13V9.624h-2z"></path>

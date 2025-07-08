@@ -9,11 +9,7 @@ const AlignBottom = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M3 19h18v2H3v-2zm5-6h3l-4 4-4-4h3V3h2v10zm10 0h3l-4 4-4-4h3V3h2v10z"></path>

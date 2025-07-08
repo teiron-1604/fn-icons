@@ -9,11 +9,7 @@ const ShareFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M18 8a3 3 0 100-6 3 3 0 000 6z"></path>

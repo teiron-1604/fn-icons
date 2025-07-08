@@ -9,11 +9,7 @@ const MoonFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M12 3a6.364 6.364 0 109 9 9 9 0 11-9-9z"></path>

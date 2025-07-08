@@ -9,11 +9,7 @@ const Device2 = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M16 13v8h5v-8h-5zm-1-2h7a1 1 0 011 1v10a1 1 0 01-1 1h-7a1 1 0 01-1-1V12a1 1 0 011-1z"></path>

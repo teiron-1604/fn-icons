@@ -9,11 +9,7 @@ const UserSearch = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M18 14a4 4 0 013.445 6.03l1.262 1.263.068.076a1 1 0 01-1.406 1.406l-.076-.068-1.263-1.262A4 4 0 1118 14zm0 2a2 2 0 101.265 3.547 1.008 1.008 0 01.282-.281A2 2 0 0018 16z"></path>

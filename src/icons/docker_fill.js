@@ -9,11 +9,7 @@ const DockerFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M12.446 2.313h-2.5v2.5h2.5v-2.5z"></path>

@@ -9,11 +9,7 @@ const FlagFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M2 3h19.138a.5.5 0 01.435.748L18 10l3.573 6.252a.499.499 0 01-.435.748H4v5H2V3z"></path>

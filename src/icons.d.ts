@@ -651,6 +651,7 @@ export const AddL: Icon;
 export const Add: Icon;
 export const AddS: Icon;
 export const Loader: Icon;
+export const Loader2: Icon;
 export const Dash: Icon;
 export const DashS: Icon;
 export const Search: Icon;

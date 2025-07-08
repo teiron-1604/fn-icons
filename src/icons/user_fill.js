@@ -9,11 +9,7 @@ const UserFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M11.999 13.687c3.6 0 7.404 1.741 8.805 5.46a1 1 0 01-.935 1.353H4.129a1 1 0 01-.936-1.352c1.402-3.72 5.205-5.461 8.806-5.461z"></path>

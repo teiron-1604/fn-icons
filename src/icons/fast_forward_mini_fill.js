@@ -9,11 +9,7 @@ const FastForwardMiniFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M12.36 5.501a1 1 0 011.054.11l7.2 5.6a1 1 0 010 1.579l-7.2 5.6a1 1 0 01-1.614-.79v-4.8l-7.186 5.59A1 1 0 013 17.6V6.4a1 1 0 011.614-.79L11.8 11.2V6.4a1 1 0 01.56-.899z"></path>

@@ -9,11 +9,7 @@ const ArrowDropRightFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M14.457 12.957a1 1 0 000-1.414l-3.5-3.5a1 1 0 00-1.707.707v7a1 1 0 001.707.707l3.5-3.5z"></path>

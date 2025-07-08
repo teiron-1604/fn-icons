@@ -9,11 +9,7 @@ const DeviceFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M19 6h-8a1 1 0 00-1 1v13H4a1 1 0 01-1-1V3a1 1 0 011-1h14a1 1 0 011 1v3zm-6 2h8a1 1 0 011 1v12a1 1 0 01-1 1h-8a1 1 0 01-1-1V9a1 1 0 011-1z"></path>

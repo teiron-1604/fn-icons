@@ -9,11 +9,7 @@ const Balck = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M5.107 2.468l17.35 19.494v-.001h-3.283l-.208-.234h-1.203a29.411 29.411 0 01-.265-1.65l-1.624-1.824a20.11 20.11 0 00.504 3.474h-2.67a20.075 20.075 0 01-.461-3.833h2.308l-.5-.562H4.175l.28-2.028h7.186l.221-1.445h-6l.28-2.007h4.035L8.89 10.408H6.202l.37-2.607-4.748-5.333h3.283z"></path>

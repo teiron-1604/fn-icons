@@ -9,11 +9,7 @@ const UserSwitchFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M21.191 18.105a.9.9 0 01-.093 1.795h-3.29l1.214.868a.901.901 0 01-1.047 1.464l-3.5-2.5A.9.9 0 0115 18.1h6.1l.092.005z"></path>

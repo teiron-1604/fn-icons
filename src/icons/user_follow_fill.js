@@ -9,11 +9,7 @@ const UserFollowFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M20.367 15.225a1 1 0 011.406 1.406l-.068.076-4 4a1 1 0 01-1.338.068l-.076-.068-2-2-.069-.076a1 1 0 011.407-1.406l.076.068 1.293 1.293 3.293-3.293.076-.068z"></path>

@@ -9,11 +9,7 @@ const UserShared = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M17.793 14.293a1 1 0 011.338-.068l.076.068 2.5 2.5.068.076a1 1 0 010 1.262l-.068.076-2.5 2.5a1 1 0 11-1.414-1.414l.793-.793H15.5a1 1 0 110-2h3.086l-.793-.793-.069-.076a1 1 0 01.069-1.338z"></path>

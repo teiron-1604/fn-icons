@@ -9,11 +9,7 @@ const ArrowDownSFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M18.924 8.617a1 1 0 01-.217 1.09l-6 6a1 1 0 01-1.414 0l-6-6A1 1 0 016 8h12a1 1 0 01.924.617z"></path>

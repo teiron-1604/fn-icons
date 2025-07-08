@@ -9,11 +9,7 @@ const FolderSearchFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M21 5h-8.586l-2-2H3a1 1 0 00-1 1v16a1 1 0 001 1h9.682a6 6 0 119.235-6H22V6a1 1 0 00-1-1z"></path>

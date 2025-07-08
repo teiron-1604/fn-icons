@@ -643,6 +643,7 @@ export { default as AddL } from './icons/add_l';
 export { default as Add } from './icons/add';
 export { default as AddS } from './icons/add_s';
 export { default as Loader } from './icons/loader';
+export { default as Loader2 } from './icons/loader2';
 export { default as Dash } from './icons/dash';
 export { default as DashS } from './icons/dash_s';
 export { default as Search } from './icons/search';

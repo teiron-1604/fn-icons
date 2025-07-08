@@ -9,11 +9,7 @@ const User = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M11.999 13.686c3.6 0 7.404 1.742 8.806 5.461a1 1 0 01-.936 1.353H4.129a1 1 0 01-.936-1.353c1.402-3.72 5.205-5.46 8.806-5.46zm6.204 4.814c-1.336-1.833-3.702-2.814-6.204-2.814s-4.868.981-6.204 2.814h12.408z"></path>

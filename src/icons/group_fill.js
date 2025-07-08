@@ -9,11 +9,7 @@ const GroupFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M3.13 19.5c2.418-6.418 11.322-6.418 13.74 0H3.13z"></path>

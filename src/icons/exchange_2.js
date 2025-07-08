@@ -9,11 +9,7 @@ const Exchange2 = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M5 14h14v2h-9v3l-5-5zm9-6V5l5 5H5V8h9z"></path>

@@ -9,11 +9,7 @@ const UserUnfollowFill = props => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill={color}
       {...otherProps}
     >
       <path d="M12.003 13.687c.48 0 .965.032 1.447.094a5.48 5.48 0 00-1.447 3.719c0 1.107.328 2.137.891 3H4.132a1.002 1.002 0 01-.935-1.352c1.401-3.72 5.205-5.461 8.806-5.461z"></path>
