@@ -1,9 +1,13 @@
 {
-  "presets": [
-    ["@babel/env", { "modules": false }],
-    "@babel/react"
-  ],
+  "presets": [["@babel/env", { "modules": false }], "@babel/react"],
   "plugins": [
-    "@babel/proposal-object-rest-spread"
+    "@babel/proposal-object-rest-spread",
+    [
+      "transform-react-remove-prop-types",
+      {
+        "removeImport": true,
+        "additionalLibraries": ["react-transition-group"]
+      }
+    ]
   ]
 }

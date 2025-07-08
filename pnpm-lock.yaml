@@ -48,6 +48,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: ^2.3.3
         version: 2.4.2(rollup@1.32.1)
+      babel-plugin-transform-react-remove-prop-types:
+        specifier: ^0.4.24
+        version: 0.4.24
       cheerio:
         specifier: ^1.0.0-rc.3
         version: 1.1.0
@@ -921,6 +924,9 @@ packages:
     resolution: {integrity: sha512-Xgp9g+A/cG47sUyRwwYxGM4bR/jDRg5N6it/8+HxCnbT5XNKSKDT9xm4oag/osgqjC2It/vH0yXsomOG6k558g==}
     peerDependencies:
       styled-components: '>= 2'
+
+  babel-plugin-transform-react-remove-prop-types@0.4.24:
+    resolution: {integrity: sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -4059,6 +4065,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
+
+  babel-plugin-transform-react-remove-prop-types@0.4.24: {}
 
   balanced-match@1.0.2: {}
 
