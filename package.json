@@ -26,7 +26,7 @@
   },
   "scripts": {
     "fetch:svg": "node bin/fetch-svg.js",
-    "generate": "sudo rm -rf src/icons && node bin/build.js",
+    "generate": "node bin/build.js",
     "build:bundle": "rollup --c ./build/rollup.config.bundle.js",
     "build:docs": "rollup -c ./build/rollup.config.prod.js",
     "dev": "rollup -w -c ./build/rollup.config.dev.js"

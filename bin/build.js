@@ -5,7 +5,7 @@ const fs = require('fs')
 const format = require('prettier-eslint')
 const processSvg = require('./process-svg')
 const { parseName } = require('./utils')
-const defaultStyle = process.env.npm_package_config_style || 'stroke'
+const defaultStyle = process.env.npm_package_config_style || 'fill'
 const { getAttrs, getElementCode } = require('./template')
 const icons = require('../src/data.json')
 

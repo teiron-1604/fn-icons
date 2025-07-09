@@ -4,7 +4,7 @@ const upperCamelCase = require('uppercamelcase')
 const forceStroke = (name = '') => name.toLowerCase() === 'dash'
 
 const parseName = (name, defaultStyle) => {
-  const nameSlices = name.split('-')
+  const nameSlices = name.split('_')
   const style = nameSlices[nameSlices.length - 1]
 
   const finalStyle = (() => {
